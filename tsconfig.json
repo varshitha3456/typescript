@@ -1,0 +1,43 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // ---- File Layout ----
+    "rootDir": "./src",        // where your .ts source files live
+    "outDir": "./dist",        // where compiled .js files go
+
+    // ---- Environment Settings ----
+    // See also https://aka.ms/tsconfig/module
+    "module": "nodenext",      // matches Node.js's module system (ESM/CommonJS)
+    "target": "es2020",        // JS version to compile down to
+
+    // For Node.js: include Node's global types (process, console, require, etc.)
+    "types": ["node"],          // requires: npm install -D @types/node
+    // "lib": ["esnext"],       // optional: include latest JS library features
+
+    // ---- Other Outputs ----
+    "sourceMap": true,          // generate .map files for debugging
+    "declaration": true,        // generate .d.ts type declaration files
+    "declarationMap": true,     // generate source maps for .d.ts files
+
+    // ---- Stricter Typechecking Options ----
+    "noUncheckedIndexedAccess": true,   // arr[i] is type | undefined, not just type
+    "exactOptionalPropertyTypes": true, // optional props can't be explicitly 'undefined'
+
+    // ---- Style Options (uncomment as needed) ----
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // ---- Recommended Options ----
+    "strict": true,             // enables all strict type-checking options
+    // "jsx": "react-jsx",       // uncomment if using React
+    // "verbatimModuleSyntax": true,
+    // "isolatedModules": true,
+    // "noUncheckedSideEffectImports": true,
+    // "moduleDetection": "force",
+    "skipLibCheck": true        // skip type-checking of .d.ts files (faster builds)
+  }
+}
